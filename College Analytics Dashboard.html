@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://readdy.link/share/caea582c3f305058907a660e619d59ed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" crossorigin="anonymous" async="" src="./College Analytics Dashboard_files/array.js.download"></script><script src="./College Analytics Dashboard_files/e.js.download"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Analytics Dashboard</title>
+<script src="./College Analytics Dashboard_files/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#8b5cf6'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./College Analytics Dashboard_files/css2" rel="stylesheet">
+<link href="./College Analytics Dashboard_files/remixicon.min.css" rel="stylesheet">
+<script src="./College Analytics Dashboard_files/echarts.min.js.download"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.widget-dragging { opacity: 0.8; transform: scale(1.02); }
+.widget-drop-zone { border: 2px dashed #3b82f6; background: rgba(59, 130, 246, 0.05); }
+.sidebar-collapsed { width: 4rem; }
+.widget-resize-handle { position: absolute; bottom: 0; right: 0; width: 1rem; height: 1rem; cursor: se-resize; }
+</style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.-right-1{right:-0.25rem}.-top-1{top:-0.25rem}.left-3{left:0.75rem}.top-1\/2{top:50%}.col-span-12{grid-column:span 12 / span 12}.col-span-3{grid-column:span 3 / span 3}.col-span-4{grid-column:span 4 / span 4}.col-span-6{grid-column:span 6 / span 6}.col-span-8{grid-column:span 8 / span 8}.mx-8{margin-left:2rem;margin-right:2rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-2{margin-left:0.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.grid{display:grid}.h-2{height:0.5rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-48{height:12rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-8{height:2rem}.h-80{height:20rem}.min-h-screen{min-height:100vh}.w-2{width:0.5rem}.w-3{width:0.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-8{width:2rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.flex-1{flex:1 1 0%}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-auto{overflow:auto}.whitespace-nowrap{white-space:nowrap}.\!rounded-button{border-radius:8px !important}.rounded{border-radius:8px}.rounded-button{border-radius:8px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:16px}.rounded-xl{border-radius:20px}.rounded-tl{border-top-left-radius:8px}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-r{border-right-width:1px}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-green-200{--tw-border-opacity:1;border-color:rgb(187 247 208 / var(--tw-border-opacity, 1))}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170 / var(--tw-border-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-primary{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-purple-500{--tw-bg-opacity:1;background-color:rgb(168 85 247 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pl-10{padding-left:2.5rem}.pr-4{padding-right:1rem}.text-center{text-align:center}.font-\[\'Pacifico\'\]{font-family:'Pacifico'}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.tracking-wider{letter-spacing:0.05em}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-green-900{--tw-text-opacity:1;color:rgb(20 83 45 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-orange-800{--tw-text-opacity:1;color:rgb(154 52 18 / var(--tw-text-opacity, 1))}.text-orange-900{--tw-text-opacity:1;color:rgb(124 45 18 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-blue-600:hover{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:text-blue-600:hover{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.hover\:text-gray-600:hover{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.focus\:border-transparent:focus{border-color:transparent}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-primary:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}</style><link type="image/png" rel="icon" href="https://public.readdy.ai/gen_page/readdy-logo.png"><link rel="stylesheet" href="./College Analytics Dashboard_files/css2(1)"></head>
+<body class="bg-gray-50">
+<div class="min-h-screen flex flex-col">
+<header class="bg-white shadow-sm border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<button id="sidebarToggle" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 bg-primary text-white rounded flex items-center justify-center font-[&#39;Pacifico&#39;] text-lg">L</div>
+<span class="font-[&#39;Pacifico&#39;] text-xl text-gray-900">logo</span>
+</div>
+</div>
+<div class="flex-1 max-w-2xl mx-8">
+<div class="relative">
+<div class="w-6 h-6 flex items-center justify-center absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+<i class="ri-search-line"></i>
+</div>
+<input type="text" placeholder="Search students, courses, events..." class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="text-sm text-gray-600">
+<span class="font-medium">Tuesday, September 2, 2025</span>
+<span class="ml-2" id="currentTime">11:30 AM</span>
+</div>
+<div class="flex items-center space-x-2">
+<button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors relative">
+<i class="ri-notification-line ri-lg"></i>
+<span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full text-xs"></span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors">
+<i class="ri-settings-line ri-lg"></i>
+</button>
+<div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+<i class="ri-user-line text-gray-600"></i>
+</div>
+</div>
+</div>
+</header>
+<div class="flex flex-1">
+<aside id="sidebar" class="bg-white shadow-sm border-r border-gray-200 w-64 transition-all duration-300">
+<div class="p-4">
+<div class="flex items-center space-x-2 mb-6">
+<select class="flex-1 px-3 py-2 border border-gray-200 rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+<option>Today</option>
+<option>This Week</option>
+<option>This Month</option>
+<option>Custom Range</option>
+</select>
+</div>
+<nav class="space-y-2">
+<div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Analytics</div>
+<a href="https://readdy.ai/home/b687bd9c-b9d3-416e-a98b-9d2a61686dc6/7e8e3cde-3dcc-48df-b20e-7be99a555340" data-readdy="true" class="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-user-line"></i>
+</div>
+<span class="text-sm">Attendance</span>
+</a>
+<a href="https://readdy.link/share/caea582c3f305058907a660e619d59ed#" class="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-bar-chart-line"></i>
+</div>
+<span class="text-sm">Academic Performance</span>
+</a>
+<a href="https://readdy.link/share/caea582c3f305058907a660e619d59ed#" class="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-trophy-line"></i>
+</div>
+<span class="text-sm">Student Activities</span>
+</a>
+<div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 mt-6">Management</div>
+<a href="https://readdy.link/share/caea582c3f305058907a660e619d59ed#" class="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-calendar-line"></i>
+</div>
+<span class="text-sm">Events Calendar</span>
+</a>
+<a href="https://readdy.link/share/caea582c3f305058907a660e619d59ed#" class="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-file-text-line"></i>
+</div>
+<span class="text-sm">Reports</span>
+</a>
+<a href="https://readdy.link/share/caea582c3f305058907a660e619d59ed#" class="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-download-line"></i>
+</div>
+<span class="text-sm">Downloads</span>
+</a>
+<div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 mt-6">Customization</div>
+<a href="https://readdy.link/share/caea582c3f305058907a660e619d59ed#" class="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-layout-line"></i>
+</div>
+<span class="text-sm">Widget Layout</span>
+</a>
+</nav>
+</div>
+</aside>
+<main class="flex-1 p-6 overflow-auto">
+<div class="mb-6 flex items-center justify-between">
+<div>
+<h1 class="text-2xl font-bold text-gray-900">Dashboard Overview</h1>
+<p class="text-gray-600 mt-1">Monitor college performance and student analytics</p>
+</div>
+<button id="addWidget" class="bg-primary text-white px-4 py-2 rounded-button flex items-center space-x-2 hover:bg-blue-600 transition-colors whitespace-nowrap !rounded-button">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-add-line"></i>
+</div>
+<span>Add Widget</span>
+</button>
+</div>
+<div id="widgetGrid" class="grid grid-cols-12 gap-6 min-h-screen">
+<div class="col-span-4 bg-white rounded-xl shadow-sm border border-gray-200 p-6 widget-item" data-widget="attendance" draggable="true">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold text-gray-900">Attendance Overview</h3>
+<div class="flex items-center space-x-2">
+<span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full">Live</span>
+<button class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-600">
+<i class="ri-more-line"></i>
+</button>
+</div>
+</div>
+<div id="attendanceChart" class="h-64" _echarts_instance_="ec_1756792820305" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 340px; height: 256px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="425" height="320" style="position: absolute; left: 0px; top: 0px; width: 340px; height: 256px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+<div class="mt-4 grid grid-cols-3 gap-4 text-center">
+<div>
+<div class="text-2xl font-bold text-gray-900">94.2%</div>
+<div class="text-xs text-gray-500">Overall</div>
+</div>
+<div>
+<div class="text-2xl font-bold text-green-600">1,847</div>
+<div class="text-xs text-gray-500">Present</div>
+</div>
+<div>
+<div class="text-2xl font-bold text-red-600">114</div>
+<div class="text-xs text-gray-500">Absent</div>
+</div>
+</div>
+<div class="widget-resize-handle bg-gray-200 rounded-tl"></div>
+</div>
+<div class="col-span-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6 widget-item" data-widget="performance" draggable="true">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold text-gray-900">Academic Performance Trends</h3>
+<div class="flex items-center space-x-2">
+<select class="text-xs border border-gray-200 rounded px-2 py-1">
+<option>Last 6 Months</option>
+<option>Last Year</option>
+<option>All Time</option>
+</select>
+<button class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-600">
+<i class="ri-more-line"></i>
+</button>
+</div>
+</div>
+<div id="performanceChart" class="h-80" _echarts_instance_="ec_1756792820306" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 754px; height: 320px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="942" height="400" style="position: absolute; left: 0px; top: 0px; width: 754px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgba(255, 255, 255, 0.9); border-width: 1px; border-radius: 4px; color: rgb(31, 41, 55); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(378px, 40px, 0px); border-color: rgb(255, 255, 255); pointer-events: none; visibility: hidden; opacity: 0;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#1f2937;font-weight:400;line-height:1;">May</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#5470c6;"></span><span style="font-size:14px;color:#1f2937;font-weight:400;margin-left:2px">Mathematics</span><span style="float:right;margin-left:20px;font-size:14px;color:#1f2937;font-weight:900">85</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#91cc75;"></span><span style="font-size:14px;color:#1f2937;font-weight:400;margin-left:2px">Science</span><span style="float:right;margin-left:20px;font-size:14px;color:#1f2937;font-weight:900">83</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#fac858;"></span><span style="font-size:14px;color:#1f2937;font-weight:400;margin-left:2px">English</span><span style="float:right;margin-left:20px;font-size:14px;color:#1f2937;font-weight:900">86</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
+<div class="widget-resize-handle bg-gray-200 rounded-tl"></div>
+</div>
+<div class="col-span-3 bg-white rounded-xl shadow-sm border border-gray-200 p-6 widget-item" data-widget="events" draggable="true">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold text-gray-900">Upcoming Events</h3>
+<button class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-600">
+<i class="ri-more-line"></i>
+</button>
+</div>
+<div class="space-y-4">
+<div class="flex items-start space-x-3">
+<div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+<div class="flex-1">
+<div class="text-sm font-medium text-gray-900">Annual Sports Meet</div>
+<div class="text-xs text-gray-500">September 15, 2025</div>
+<div class="text-xs text-blue-600">Main Stadium</div>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+<div class="flex-1">
+<div class="text-sm font-medium text-gray-900">Science Exhibition</div>
+<div class="text-xs text-gray-500">September 22, 2025</div>
+<div class="text-xs text-green-600">Science Block</div>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<div class="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+<div class="flex-1">
+<div class="text-sm font-medium text-gray-900">Cultural Festival</div>
+<div class="text-xs text-gray-500">October 5, 2025</div>
+<div class="text-xs text-orange-600">Auditorium</div>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<div class="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+<div class="flex-1">
+<div class="text-sm font-medium text-gray-900">Parent-Teacher Meet</div>
+<div class="text-xs text-gray-500">October 12, 2025</div>
+<div class="text-xs text-purple-600">All Classrooms</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 text-primary text-sm hover:text-blue-600 transition-colors">View All Events</button>
+<div class="widget-resize-handle bg-gray-200 rounded-tl"></div>
+</div>
+<div class="col-span-6 bg-white rounded-xl shadow-sm border border-gray-200 p-6 widget-item" data-widget="activities" draggable="true">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold text-gray-900">Student Activities Participation</h3>
+<button class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-600">
+<i class="ri-more-line"></i>
+</button>
+</div>
+<div id="activitiesChart" class="h-64" _echarts_instance_="ec_1756792820307" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;"><div style="position: relative; width: 547px; height: 256px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas data-zr-dom-id="zr_0" width="683" height="320" style="position: absolute; left: 0px; top: 0px; width: 547px; height: 256px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div class=""></div></div>
+<div class="widget-resize-handle bg-gray-200 rounded-tl"></div>
+</div>
+<div class="col-span-3 bg-white rounded-xl shadow-sm border border-gray-200 p-6 widget-item" data-widget="engagement" draggable="true">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold text-gray-900">Student Engagement</h3>
+<button class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-600">
+<i class="ri-more-line"></i>
+</button>
+</div>
+<div id="engagementChart" class="h-48" _echarts_instance_="ec_1756792820308" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><div style="position: relative; width: 237px; height: 192px; padding: 0px; margin: 0px; border-width: 0px;"><canvas data-zr-dom-id="zr_0" width="296" height="240" style="position: absolute; left: 0px; top: 0px; width: 237px; height: 192px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div>
+<div class="mt-4 text-center">
+<div class="text-2xl font-bold text-primary">8.7</div>
+<div class="text-xs text-gray-500">Engagement Score</div>
+<div class="text-xs text-green-600 mt-1">↑ 12% from last month</div>
+</div>
+<div class="widget-resize-handle bg-gray-200 rounded-tl"></div>
+</div>
+<div class="col-span-12 bg-white rounded-xl shadow-sm border border-gray-200 p-6 widget-item" data-widget="announcements" draggable="true">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold text-gray-900">Important Announcements</h3>
+<button class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-600">
+<i class="ri-more-line"></i>
+</button>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+<div class="flex items-center space-x-2 mb-2">
+<div class="w-4 h-4 flex items-center justify-center text-blue-600">
+<i class="ri-information-line"></i>
+</div>
+<span class="text-sm font-medium text-blue-900">Academic Notice</span>
+</div>
+<p class="text-sm text-blue-800">Mid-term examination schedule has been updated. Please check your student portal for detailed timetable.</p>
+<div class="text-xs text-blue-600 mt-2">2 hours ago</div>
+</div>
+<div class="bg-green-50 border border-green-200 rounded-lg p-4">
+<div class="flex items-center space-x-2 mb-2">
+<div class="w-4 h-4 flex items-center justify-center text-green-600">
+<i class="ri-trophy-line"></i>
+</div>
+<span class="text-sm font-medium text-green-900">Achievement</span>
+</div>
+<p class="text-sm text-green-800">Computer Science Department wins National Programming Competition. Congratulations to all participants!</p>
+<div class="text-xs text-green-600 mt-2">1 day ago</div>
+</div>
+<div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+<div class="flex items-center space-x-2 mb-2">
+<div class="w-4 h-4 flex items-center justify-center text-orange-600">
+<i class="ri-calendar-line"></i>
+</div>
+<span class="text-sm font-medium text-orange-900">Event Reminder</span>
+</div>
+<p class="text-sm text-orange-800">Registration for Annual Cultural Festival closes on September 10th. Limited spots available for performances.</p>
+<div class="text-xs text-orange-600 mt-2">3 days ago</div>
+</div>
+</div>
+<div class="widget-resize-handle bg-gray-200 rounded-tl"></div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script type="text/javascript" crossorigin="anonymous" src="./College Analytics Dashboard_files/surveys.js.download"></script><script type="text/javascript" crossorigin="anonymous" src="./College Analytics Dashboard_files/dead-clicks-autocapture.js.download"></script><script type="text/javascript" crossorigin="anonymous" src="./College Analytics Dashboard_files/config.js.download"></script><script id="timeUpdate">
+function updateTime() {
+const now = new Date();
+const timeString = now.toLocaleTimeString('en-US', {
+hour: 'numeric',
+minute: '2-digit',
+hour12: true
+});
+document.getElementById('currentTime').textContent = timeString;
+}
+document.addEventListener('DOMContentLoaded', function() {
+updateTime();
+setInterval(updateTime, 60000);
+});
+</script>
+<script id="sidebarToggle">
+document.addEventListener('DOMContentLoaded', function() {
+const sidebarToggle = document.getElementById('sidebarToggle');
+const sidebar = document.getElementById('sidebar');
+sidebarToggle.addEventListener('click', function() {
+sidebar.classList.toggle('sidebar-collapsed');
+if (sidebar.classList.contains('sidebar-collapsed')) {
+sidebar.querySelectorAll('span').forEach(span => {
+if (!span.closest('.text-xs')) {
+span.style.display = 'none';
+}
+});
+} else {
+sidebar.querySelectorAll('span').forEach(span => {
+span.style.display = '';
+});
+}
+});
+});
+</script>
+<script id="chartInitialization">
+document.addEventListener('DOMContentLoaded', function() {
+const attendanceChart = echarts.init(document.getElementById('attendanceChart'));
+const attendanceOption = {
+animation: false,
+tooltip: {
+trigger: 'item',
+backgroundColor: 'rgba(255, 255, 255, 0.9)',
+textStyle: { color: '#1f2937' }
+},
+series: [{
+type: 'pie',
+radius: ['40%', '70%'],
+center: ['50%', '50%'],
+data: [
+{ value: 1847, name: 'Present', itemStyle: { color: 'rgba(87, 181, 231, 1)' }},
+{ value: 114, name: 'Absent', itemStyle: { color: 'rgba(252, 141, 98, 1)' }},
+{ value: 45, name: 'Late', itemStyle: { color: 'rgba(251, 191, 114, 1)' }}
+],
+itemStyle: { borderRadius: 4 }
+}],
+grid: { top: 0, bottom: 0, left: 0, right: 0 }
+};
+attendanceChart.setOption(attendanceOption);
+const performanceChart = echarts.init(document.getElementById('performanceChart'));
+const performanceOption = {
+animation: false,
+tooltip: {
+trigger: 'axis',
+backgroundColor: 'rgba(255, 255, 255, 0.9)',
+textStyle: { color: '#1f2937' }
+},
+xAxis: {
+type: 'category',
+data: ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+axisLine: { lineStyle: { color: '#e5e7eb' }},
+axisTick: { show: false },
+axisLabel: { color: '#6b7280' }
+},
+yAxis: {
+type: 'value',
+axisLine: { show: false },
+axisTick: { show: false },
+axisLabel: { color: '#6b7280' },
+splitLine: { lineStyle: { color: '#f3f4f6' }}
+},
+series: [
+{
+name: 'Mathematics',
+type: 'line',
+smooth: true,
+data: [78, 82, 85, 87, 89, 92],
+lineStyle: { color: 'rgba(87, 181, 231, 1)', width: 3 },
+areaStyle: {
+color: {
+type: 'linear',
+x: 0, y: 0, x2: 0, y2: 1,
+colorStops: [
+{ offset: 0, color: 'rgba(87, 181, 231, 0.1)' },
+{ offset: 1, color: 'rgba(87, 181, 231, 0.01)' }
+]
+}
+},
+symbol: 'none'
+},
+{
+name: 'Science',
+type: 'line',
+smooth: true,
+data: [75, 79, 83, 86, 88, 90],
+lineStyle: { color: 'rgba(141, 211, 199, 1)', width: 3 },
+areaStyle: {
+color: {
+type: 'linear',
+x: 0, y: 0, x2: 0, y2: 1,
+colorStops: [
+{ offset: 0, color: 'rgba(141, 211, 199, 0.1)' },
+{ offset: 1, color: 'rgba(141, 211, 199, 0.01)' }
+]
+}
+},
+symbol: 'none'
+},
+{
+name: 'English',
+type: 'line',
+smooth: true,
+data: [80, 83, 86, 88, 91, 94],
+lineStyle: { color: 'rgba(251, 191, 114, 1)', width: 3 },
+areaStyle: {
+color: {
+type: 'linear',
+x: 0, y: 0, x2: 0, y2: 1,
+colorStops: [
+{ offset: 0, color: 'rgba(251, 191, 114, 0.1)' },
+{ offset: 1, color: 'rgba(251, 191, 114, 0.01)' }
+]
+}
+},
+symbol: 'none'
+}
+],
+grid: { top: 20, bottom: 20, left: 40, right: 20 }
+};
+performanceChart.setOption(performanceOption);
+const activitiesChart = echarts.init(document.getElementById('activitiesChart'));
+const activitiesOption = {
+animation: false,
+tooltip: {
+trigger: 'axis',
+backgroundColor: 'rgba(255, 255, 255, 0.9)',
+textStyle: { color: '#1f2937' }
+},
+xAxis: {
+type: 'category',
+data: ['Sports', 'Music', 'Drama', 'Debate', 'Art', 'Dance'],
+axisLine: { lineStyle: { color: '#e5e7eb' }},
+axisTick: { show: false },
+axisLabel: { color: '#6b7280' }
+},
+yAxis: {
+type: 'value',
+axisLine: { show: false },
+axisTick: { show: false },
+axisLabel: { color: '#6b7280' },
+splitLine: { lineStyle: { color: '#f3f4f6' }}
+},
+series: [{
+type: 'bar',
+data: [456, 234, 178, 145, 267, 189],
+itemStyle: {
+color: 'rgba(87, 181, 231, 1)',
+borderRadius: [4, 4, 0, 0]
+},
+barWidth: '60%'
+}],
+grid: { top: 20, bottom: 20, left: 40, right: 20 }
+};
+activitiesChart.setOption(activitiesOption);
+const engagementChart = echarts.init(document.getElementById('engagementChart'));
+const engagementOption = {
+animation: false,
+series: [{
+type: 'gauge',
+startAngle: 180,
+endAngle: 0,
+min: 0,
+max: 10,
+radius: '80%',
+center: ['50%', '75%'],
+data: [{ value: 8.7, name: '' }],
+detail: { show: false },
+pointer: { show: false },
+title: { show: false },
+axisLine: {
+lineStyle: {
+width: 20,
+color: [
+[0.3, 'rgba(252, 141, 98, 1)'],
+[0.7, 'rgba(251, 191, 114, 1)'],
+[1, 'rgba(87, 181, 231, 1)']
+]
+}
+},
+axisTick: { show: false },
+axisLabel: { show: false },
+splitLine: { show: false }
+}],
+grid: { top: 0, bottom: 0, left: 0, right: 0 }
+};
+engagementChart.setOption(engagementOption);
+window.addEventListener('resize', function() {
+attendanceChart.resize();
+performanceChart.resize();
+activitiesChart.resize();
+engagementChart.resize();
+});
+});
+</script>
+<script id="dragDropFunctionality">
+document.addEventListener('DOMContentLoaded', function() {
+let draggedElement = null;
+let dragOffset = { x: 0, y: 0 };
+const widgets = document.querySelectorAll('.widget-item');
+const grid = document.getElementById('widgetGrid');
+widgets.forEach(widget => {
+widget.draggable = true;
+widget.addEventListener('dragstart', function(e) {
+draggedElement = this;
+this.classList.add('widget-dragging');
+const rect = this.getBoundingClientRect();
+dragOffset.x = e.clientX - rect.left;
+dragOffset.y = e.clientY - rect.top;
+e.dataTransfer.effectAllowed = 'move';
+e.dataTransfer.setData('text/html', this.outerHTML);
+});
+widget.addEventListener('dragend', function() {
+this.classList.remove('widget-dragging');
+draggedElement = null;
+});
+});
+grid.addEventListener('dragover', function(e) {
+e.preventDefault();
+e.dataTransfer.dropEffect = 'move';
+});
+grid.addEventListener('drop', function(e) {
+e.preventDefault();
+if (draggedElement) {
+const afterElement = getDragAfterElement(grid, e.clientY);
+if (afterElement == null) {
+grid.appendChild(draggedElement);
+} else {
+grid.insertBefore(draggedElement, afterElement);
+}
+}
+});
+function getDragAfterElement(container, y) {
+const draggableElements = [...container.querySelectorAll('.widget-item:not(.widget-dragging)')];
+return draggableElements.reduce((closest, child) => {
+const box = child.getBoundingClientRect();
+const offset = y - box.top - box.height / 2;
+if (offset < 0 && offset > closest.offset) {
+return { offset: offset, element: child };
+} else {
+return closest;
+}
+}, { offset: Number.NEGATIVE_INFINITY }).element;
+}
+});
+</script>
+<script id="addWidgetFunctionality">
+document.addEventListener('DOMContentLoaded', function() {
+const addWidgetBtn = document.getElementById('addWidget');
+addWidgetBtn.addEventListener('click', function() {
+const widgetTypes = [
+{ name: 'Quick Stats', icon: 'ri-dashboard-line' },
+{ name: 'Grade Distribution', icon: 'ri-pie-chart-line' },
+{ name: 'Recent Activity', icon: 'ri-time-line' },
+{ name: 'Course Progress', icon: 'ri-progress-line' }
+];
+const randomWidget = widgetTypes[Math.floor(Math.random() * widgetTypes.length)];
+const newWidget = document.createElement('div');
+newWidget.className = 'col-span-4 bg-white rounded-xl shadow-sm border border-gray-200 p-6 widget-item';
+newWidget.draggable = true;
+newWidget.innerHTML = `
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold text-gray-900">${randomWidget.name}</h3>
+<button class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-gray-600">
+<i class="ri-more-line"></i>
+</button>
+</div>
+<div class="h-32 bg-gray-50 rounded-lg flex items-center justify-center">
+<div class="text-center">
+<div class="w-8 h-8 flex items-center justify-center mx-auto mb-2 text-gray-400">
+<i class="${randomWidget.icon} ri-2x"></i>
+</div>
+<p class="text-sm text-gray-500">Widget content will load here</p>
+</div>
+</div>
+<div class="widget-resize-handle bg-gray-200 rounded-tl"></div>
+`;
+document.getElementById('widgetGrid').appendChild(newWidget);
+newWidget.addEventListener('dragstart', function(e) {
+this.classList.add('widget-dragging');
+e.dataTransfer.effectAllowed = 'move';
+});
+newWidget.addEventListener('dragend', function() {
+this.classList.remove('widget-dragging');
+});
+});
+});
+</script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    window.shareKey = 'AR91z5j_23ceeUlOfIsfrw';
+    window.host = 'readdy.ai';
+</script>
+<script src="./College Analytics Dashboard_files/share.js.download"></script>
+<div class="extension-embed-container"><template shadowrootmode="open"><div id="extension-root" data-type="floater-button"><div id="app-container"><div class="fixed -translate-y-1/2 right-0" style="top: 0px; z-index: 100000000;"><button class="bg-black p-[0px] rounded-[2px] h-[50px] w-[50px] flex justify-center items-center"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[33px] h-[33px]"><g clip-path="url(#clip0_2794_31114)"><path d="M26.6953 63.3228C25.3832 63.1686 23.7066 62.9716 22.8915 61.8145C22.6377 61.4542 22.9586 61.0238 23.3992 61.0238H31.0344C35.1711 61.0238 35.3322 54.1353 34.813 51.2942C31.9128 35.4328 3.61323 36.5434 5.68443 56.1871C6.67767 65.6054 16.7983 70.0929 25.2432 67.5469C26.5488 67.153 29.9843 65.3227 28.397 63.7506C28.136 63.4921 27.481 63.4151 26.6953 63.3228Z" fill="white"></path><circle cx="19.7145" cy="21.4285" r="30.5714" fill="black"></circle><path d="M26.2609 29.2789C24.9489 29.1247 23.2723 28.9277 22.4573 27.7705C22.2036 27.4102 22.5244 26.9798 22.9651 26.9798H30.5998C34.7362 26.9798 34.8974 20.0909 34.3782 17.2496C31.4781 1.38727 3.18024 2.49791 5.25132 22.1428C6.2445 31.5617 16.3645 36.0494 24.8089 33.5033C26.1144 33.1094 29.5498 31.2789 27.9626 29.7068C27.7015 29.4482 27.0466 29.3712 26.2609 29.2789Z" fill="white"></path><path d="M20.9599 20.7807C20.9599 20.7809 20.9598 20.781 20.9597 20.7811C20.3777 21.3606 18.7551 21.3408 18.4623 20.3548C18.3175 19.8669 18.2965 15.6269 18.4422 15.2035C18.7771 14.2331 20.9122 14.3518 21.2646 15.5119C21.4808 16.2238 21.4337 20.3073 20.96 20.7804C20.9599 20.7805 20.9599 20.7806 20.9599 20.7807Z" fill="black"></path></g><defs><clippath id="clip0_2794_31114"><rect width="40" height="40" rx="2.28571" fill="white"></rect></clippath></defs></svg></button></div></div></div><script src="chrome-extension://oihbmmeelledioenpfcfehdjhdnlfibj/embed_script.js"></script><link rel="stylesheet" href="https://gs-extension-embeds-final.vercel.app/static/css/main.css"></template></div><div id="watermark" class="group" style="position: fixed; bottom: 48px; right: 46px; width: 184px; height: 39px; background-color: rgb(240, 240, 240); border-style: solid; border-width: 3px; border-radius: 12px; border-image-slice: 3; border-image-width: 3px; border-image-outset: 0; border-color: rgb(229, 231, 235); display: flex; align-items: center; justify-content: center; cursor: pointer;"><div class="designed-by" style="color: rgb(93, 93, 93); font-family: &quot;Secular One&quot;; font-size: 12px; line-height: 20px; font-weight: 400; padding-left: 12px;">Designed by</div><img src="./College Analytics Dashboard_files/watermark.png" style="width: 86px; margin-left: 0px;"></div></body></html>
